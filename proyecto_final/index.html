@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+  <meta name="theme-color" content="#030303">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="description" content="Driven Yield Pro System - Mantenimiento automotriz de élite con tecnología de vanguardia.">
+  <title>Driven Yield Pro | Excelencia Automotriz</title>
+  <style>
+    /* Futuristic Preloader */
+    #initial-loader {
+      position: fixed;
+      inset: 0;
+      background: #030303;
+      z-index: 999999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.8s;
+    }
+    .loader-ring {
+      width: 60px;
+      height: 60px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 50%;
+      position: relative;
+    }
+    .loader-ring::before {
+      content: '';
+      position: absolute;
+      inset: -2px;
+      border-radius: 50%;
+      border: 2px solid transparent;
+      border-top-color: #d90429;
+      border-right-color: rgba(217, 4, 41, 0.2);
+      animation: spinFuturistic 1s linear infinite;
+    }
+    .loader-text {
+      position: absolute;
+      top: calc(50% + 50px);
+      left: 50%;
+      transform: translateX(-50%);
+      color: rgba(255, 255, 255, 0.5);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.65rem;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      animation: pulseText 2s ease-in-out infinite;
+    }
+    @keyframes spinFuturistic {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    @keyframes pulseText {
+      0%, 100% { opacity: 0.5; }
+      50% { opacity: 1; color: #d90429; }
+    }
+    body { margin: 0; background: #030303; }
+  </style>
+</head>
+<body>
+  <div id="initial-loader">
+    <div class="loader-ring"></div>
+    <div class="loader-text">Inicializando</div>
+  </div>
+  <div id="app"></div>
+  <script>
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        const loader = document.getElementById('initial-loader');
+        if (loader) {
+          loader.style.opacity = '0';
+          loader.style.visibility = 'hidden';
+          setTimeout(() => loader.remove(), 800);
+        }
+      }, 500); // Pequeño retraso para que se aprecie
+    });
+  </script>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

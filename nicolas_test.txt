@@ -1,0 +1,5 @@
+¡Hola Nicolas! 
+
+Esta es una prueba de la rama 'nicolas'.
+Este archivo no afecta en absoluto el funcionamiento de la página web ni de la base de datos.
+Puedes borrarlo cuando quieras.

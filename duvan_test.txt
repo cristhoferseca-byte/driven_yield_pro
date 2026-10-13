@@ -1,0 +1,5 @@
+¡Hola Duvan!
+
+Este es otro archivo inofensivo de prueba, creado específicamente en tu propia rama.
+No afecta al proyecto principal ni a la base de datos.
+¡Éxitos en la presentación!

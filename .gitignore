@@ -1,0 +1,33 @@
+# Entornos virtuales
+venv/
+backend/venv/
+.venv/
+
+# Variables de entorno (credenciales)
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Node & Build
+node_modules/
+dist/
+.vite/
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Repo anidado (copia accidental)
+driven-yield-pro/
+# Temporales adicionales
+*.log
+*.tmp
+.cache/
+
