@@ -1,0 +1,11 @@
+# El frontend (Vue + Vite) vive en proyecto_final/
+[build]
+  base = "proyecto_final"
+  command = "npm install --include=dev && npm run build"
+  publish = "dist"
+
+# Vue Router usa createWebHistory: todas las rutas deben servir index.html
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

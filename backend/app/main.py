@@ -3,17 +3,10 @@ import os
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
-<<<<<<< HEAD
-load_dotenv()
-
-from app.routers import auth, admin, citas, servicios, perfil, practica, mecanicos
-=======
-
 # Cargar variables antes de importar routers
 load_dotenv()
 
 from app.routers import auth, admin, citas, servicios, perfil, practica, mecanicos, notificaciones
->>>>>>> origin/main
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
